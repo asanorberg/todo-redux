@@ -1,7 +1,7 @@
 import TodoInput from "@/components/TodoInput";
 import TodoList from "@/components/TodoList";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, removeTodo, toggleComplete } from "@/todoSlice";
+import { addTodo, removeTodo, toggleComplete } from "@/redux/todoSlice";
 
 function App() {
   const dispatch = useDispatch();

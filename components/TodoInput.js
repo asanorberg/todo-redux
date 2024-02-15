@@ -1,7 +1,7 @@
 import { FaPlus } from "react-icons/fa";
 // import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setTitle } from "@/todoSlice";
+import { setTitle } from "@/redux/todoSlice";
 
 function TodoInput() {
   const title = useSelector((state) => state.todos.title);
