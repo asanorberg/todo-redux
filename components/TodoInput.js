@@ -1,26 +1,26 @@
 import { FaPlus } from "react-icons/fa";
-// import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setTitle } from "@/redux/todoSlice";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "@/redux/todoSlice";
 
 function TodoInput() {
-  const title = useSelector((state) => state.todos.title);
+  const [title, setTitle] = useState("");
 
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   const handleClickAdd = () => {
-    onAddClick(title);
+    dispatch(addTodo(title));
     setTitle("");
   };
 
   const handleInputChange = (e) => {
-    dispatch(setTitle(e.target.value));
+    setTitle(e.target.value);
   };
 
   return (
-    <div className="inputContainer space-x-4 flex items-center w-full">
+    <div className="inputContainer space-x-4 flex items-center ">
       <input
-        className="py-4 pl-4 placeholder:text-ph-blue"
+        className="py-4 pl-4 placeholder:text-grey"
         type="text"
         placeholder="New todo"
         value={title}

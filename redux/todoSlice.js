@@ -14,17 +14,19 @@ export const initialState = {
   ],
 };
 
+let count = 5;
+
 export const todoSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
     addTodo: (state, action) => {
       state.todos.push({
-        id: state.todos.length,
+        id: count++,
         title: action.payload,
         done: false,
       });
-      state.titles = "";
+      state.title = "";
     },
     toggleComplete: (state, action) => {
       const todo = state.todos.find((todo) => todo.id === action.payload.id);

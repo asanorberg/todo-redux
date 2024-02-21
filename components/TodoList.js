@@ -2,17 +2,12 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todos, onRemoveClick, onDoneClick }) => {
+const TodoList = ({ todos }) => {
   return (
-    <div className="flex flex-row justify-center">
-      <ul>
+    <div className="">
+      <ul className="pl-0">
         {todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            onDoneClick={onDoneClick}
-            onRemoveClick={onRemoveClick}
-          />
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
     </div>
