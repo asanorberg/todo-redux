@@ -18,7 +18,7 @@ function TodoInput() {
   };
 
   return (
-    <div className="inputContainer space-x-4 flex items-center ">
+    <div className="inputContainer space-x-3 flex items-center ">
       <input
         className="py-4 pl-4 placeholder:text-grey"
         type="text"
